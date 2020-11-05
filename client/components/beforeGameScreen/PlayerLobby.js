@@ -3,7 +3,7 @@ import React from 'react'
 const PlayerLobby = () => {
   return (
     <div>
-      PlayerLobby
+      Player Lobby Screen
     </div>
   )
 }
