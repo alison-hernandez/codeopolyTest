@@ -1,0 +1,15 @@
+body {
+  font-family: monaco;
+  color: #0c0909;
+  background-color: #38677a;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav button {
+  display: inline-block;
+  margin: 1em;
+}
