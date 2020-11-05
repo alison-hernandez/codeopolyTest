@@ -3,7 +3,7 @@ import React from 'react'
 const ChooseCharacter = () => {
   return (
     <div>
-      Choose Character
+      Choose Character Screen
     </div>
   )
 }
