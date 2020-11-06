@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Redirect, Link } from 'react-router-dom'
 
 import logo from '../../../public/assets/codeopolyLogo.png'
+import test from '../../../public/assets/winImages/happyProgrammers.gif'
 
 const HomePage = () => {
   const [gameCode, setGameCode] = useState('');
@@ -33,6 +34,7 @@ const HomePage = () => {
     <div className="welcome">
       <div id="title">
         <img src={logo} />
+        <img src={test} />
         <h1>[Code]opoly</h1>
       </div>
       <div id="textBox">

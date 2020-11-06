@@ -1,9 +1,13 @@
+const path = require('path');
+
 module.exports = {
   entry: ['./client/index.js'], // assumes your entry point is the index.js in the root of your project folder
   mode: 'development',
   output: {
-    path: __dirname, // assumes your bundle.js will also be in the root of your project folder
-    filename: './public/bundle.js',
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'public'),
+    //publicPath: '/bundleAssets/',
+    assetModuleFilename: 'bundleAssets/[name][ext][query]'
   },
   context: __dirname,
   devtool: 'source-map',
@@ -17,17 +21,18 @@ module.exports = {
         }
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'public/bundleAssets/',
-              publicPath: 'public/bundleAssets/'
-            }
-          }
-        ]
+        test: /\.(png|svg|jpe?g|gif)$/i,
+        type: 'asset/resource'
+        // use: [
+        //   {
+        //     loader: 'file-loader',
+        //     options: {
+        //       name: '[name].[ext]',
+        //       outputPath: 'public/bundleAssets/',
+        //       publicPath: 'public/bundleAssets/'
+        //     }
+        //   }
+        // ]
       }
     ]
   }
